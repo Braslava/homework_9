@@ -6,18 +6,20 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="base/reset.css">
+    <link rel="stylesheet" href="styles/global.css">
     <link rel="stylesheet" href="libs/flexboxgrid.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles/styles.css"> 
+    <link rel="stylesheet" href="styles/modal.css">
     <title>Image Gallery</title>
 </head>
 
 <body>
     <section class="gallery">
-        <div class="overlay"></div>
-        <div class="modal">
+        <div class="modal__overlay" id="overlay"></div>
+        <div class="modal" id="modal">
             <div class="modal__text">
                 <h2 class="modal__heading">Dzēst visas bildes</h2>
-                <span class="close">&times;</span>
+                <span class="close" id="close">&times;</span>
                 <p class="modal__paragraph">
                     Vai tiešām vēlies dzēst visas bildes? Šo darbību nevar atcelt.
                 </p>
@@ -28,13 +30,11 @@
                 <button class="button modal__button">Atcelt</button>
                 <button class="button modal__button">Dzēst</button>
             </form>
-        
-
         </div>
 
         <div class="container">
             <div class="row">
-                <div class="col-xs-12 col-sm-12">
+                <div class="col-xs-12">
                     <div class="gallery__info">
                         <h3 class="info__heading">Attēlu galerija</h3>
                         <button class="button" id="delete_all">Dzēst visas bildes</button>
@@ -76,6 +76,6 @@
             </div>
         </div>
     </section>
-    
+    <script src="script.js"></script>
 </body>
 </html>
