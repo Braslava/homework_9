@@ -19,16 +19,16 @@
         <div class="modal" id="modal">
             <div class="modal__text">
                 <h2 class="modal__heading">Dzēst visas bildes</h2>
-                <span class="close" id="close">&times;</span>
+                <button class="modal__button--close" id="close"><img src="assets/icons/modal_close_X.png" alt="close button"></button>
                 <p class="modal__paragraph">
                     Vai tiešām vēlies dzēst visas bildes? Šo darbību nevar atcelt.
                 </p>
             </div>
             <form class="modal__options">
-                <input class="checkbox" type="checkbox" class="checkbox" id="checkbox1"> 
+                <input class="checkbox" type="checkbox" class="modal__checkbox" id="checkbox1"> 
                 <label for="checkbox1" class="modal__label">Nejautāt vēlreiz</label>
-                <button class="button modal__button">Atcelt</button>
-                <button class="button modal__button">Dzēst</button>
+                <button type="button" class="button modal__button" id="cancel">Atcelt</button>
+                <button type="button" class="button modal__button" id="delete">Dzēst</button>
             </form>
         </div>
 
@@ -37,7 +37,7 @@
                 <div class="col-xs-12">
                     <div class="gallery__info">
                         <h3 class="info__heading">Attēlu galerija</h3>
-                        <button class="button" id="delete_all">Dzēst visas bildes</button>
+                        <button type="button" class="button" id="delete_all">Dzēst visas bildes</button>
                     </div>
                 </div>
             </div>

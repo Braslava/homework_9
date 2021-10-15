@@ -26,7 +26,7 @@
   }
   
   .modal__heading {
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 600;
     text-transform: uppercase;
     line-height: 200%;
@@ -35,7 +35,7 @@
   
   .modal__options {
     display: grid;
-    grid-template-columns: auto 1fr 1fr 1fr;
+    grid-template-columns: auto 1.5fr 1fr 1fr;
     gap: 5px; 
     align-items: center;
     background-color: rgba(25, 59, 103, 0.05);
@@ -48,29 +48,39 @@
   }
   
   .modal__button {
-    
+    background-color: transparent;
     cursor: pointer; 
+    color: #1676F3;
+    transition: 0.4s;
+  }
+
+  .modal__button:hover, 
+  .modal__button:focus {
+      background-color: #1676F3;
+      color: #ffffff; 
   }
   
   .checkbox {
     cursor: pointer;
     margin-right: 5px;
   }
-  .close {
-    color: #666666;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-    grid-area: close;
-    font-size: 20px;
-    cursor: pointer;
-  }
   
-  .close:hover,
-  .close:focus {
-    color: black;
+  .modal__button--close {
+    padding: 5px;
+    grid-area: close;
+    cursor: pointer;
+    border:none;
+    outline: none; 
+    align-self: flex-start;
+    cursor: progress;
+ }
+  
+ .modal__button--close:hover, 
+ .modal__button--close:focus {
+    background-color: rgba(131, 128, 128, 0.7);
     text-decoration: none;
     cursor: pointer;
+    border-radius: 4px;
   }
   
   .modal__overlay {

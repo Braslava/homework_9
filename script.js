@@ -3,8 +3,11 @@ const modal = document.getElementById("modal");
 // Get the button that opens the modal
 const btn = document.getElementById("delete_all");
 
-// Get the <span> element that closes the modal
-const span = document.getElementsByClassName("close")[0];
+// Get the button element X that closes the modal
+const closeButton = document.getElementById("close");
+
+// Get the button cancel that closes the modal
+const cancelButton = document.getElementById("cancel");
 
 // Get the overlay
 const overlay = document.getElementById("overlay");
@@ -13,10 +16,17 @@ const overlay = document.getElementById("overlay");
 btn.onclick = function () {
     modal.style.display = "block";
     overlay.style.display = "block";
+    document.getElementById("cancel").focus();
 }
 
-// When the user clicks on <span> (x), close the modal
-span.onclick = function () {
+// When the user clicks on button close (x), close the modal
+closeButton.onclick = function () {
+    modal.style.display = "none";
+    overlay.style.display = "none";
+}
+
+// When the user clicks on button "cancel", close the modal
+cancelButton.onclick = function () {
     modal.style.display = "none";
     overlay.style.display = "none";
 }
