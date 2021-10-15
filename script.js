@@ -16,7 +16,7 @@ const overlay = document.getElementById("overlay");
 btn.onclick = function () {
     modal.style.display = "block";
     overlay.style.display = "block";
-    document.getElementById("cancel").focus();
+    cancelButton.focus();
 }
 
 // When the user clicks on button close (x), close the modal
