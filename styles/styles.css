@@ -38,7 +38,7 @@
   font-family: Poppins;
 }
 
-.button:hover, 
-.button:focus {
-  background-color: rgba(9, 64, 182, 0.7);
+.gallery__button:hover, 
+.gallery__button:hover:focus {
+  opacity: 0.7;
 }

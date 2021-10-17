@@ -14,30 +14,37 @@
 </head>
 
 <body>
-    <section class="gallery">
-        <div class="modal__overlay" id="overlay"></div>
-        <div class="modal" id="modal">
-            <div class="modal__text">
-                <h2 class="modal__heading">Dzēst visas bildes</h2>
-                <button class="modal__button--close" id="close"><img src="assets/icons/modal_close_X.png" alt="close button"></button>
-                <p class="modal__paragraph">
-                    Vai tiešām vēlies dzēst visas bildes? Šo darbību nevar atcelt.
-                </p>
+    <section class="modal hidden js-delete-modal">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+                    <div class="modal__wrapper js-modal-content">
+                        <div class="modal__text">
+                            <h2 class="modal__heading">Dzēst visas bildes</h2>
+                            <button class="modal__button--close js-modal__close"><img src="assets/icons/modal_close_X.png" alt="close button"></button>
+                            <p class="modal__paragraph">
+                                Vai tiešām vēlies dzēst visas bildes? Šo darbību nevar atcelt.
+                            </p>
+                        </div>
+                        <form class="modal__options">
+                            <input class="checkbox" type="checkbox" class="modal__checkbox" id="checkbox1"> 
+                            <label for="checkbox1" class="modal__label">Nejautāt vēlreiz</label>
+                            <button type="button" class="button modal__button js-modal__close">Atcelt</button>
+                            <button type="button" class="button modal__button js-modal__delete-all" autofocus>Dzēst</button>
+                        </form>
+                    </div>
+                </div>
             </div>
-            <form class="modal__options">
-                <input class="checkbox" type="checkbox" class="modal__checkbox" id="checkbox1"> 
-                <label for="checkbox1" class="modal__label">Nejautāt vēlreiz</label>
-                <button type="button" class="button modal__button" id="cancel">Atcelt</button>
-                <button type="button" class="button modal__button" id="delete">Dzēst</button>
-            </form>
         </div>
+    </section>
 
+    <section class="gallery">
         <div class="container">
             <div class="row">
                 <div class="col-xs-12">
                     <div class="gallery__info">
                         <h3 class="info__heading">Attēlu galerija</h3>
-                        <button type="button" class="button" id="delete_all">Dzēst visas bildes</button>
+                        <button type="button" class="button gallery__button js-open-modal">Dzēst visas bildes</button>
                     </div>
                 </div>
             </div>
